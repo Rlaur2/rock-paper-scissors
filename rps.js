@@ -1,11 +1,12 @@
 let computerPlay = () => {
-   let choice = Math.floor(Math.random()*3);
-   if (choice === 0) {
+    let choice;
+   let rng = Math.floor(Math.random()*3);
+   if (rng === 0) {
        choice = 'Rock';
-   } else if (choice === 1) {
+   } else if (rng === 1) {
        choice = 'Paper';
    } else {
        choice = 'Scissors';
    }
-   return choice
+   return choice;
 }
