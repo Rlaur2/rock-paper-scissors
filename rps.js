@@ -8,6 +8,12 @@ let computerPlay = (playerChoice) => {
    } else {
        aiChoice = 'Scissors';
    }
+   //Code to ensure user can input RPS in any type case (lower case, all CAPS etc.)
+   playerChoiceLower = playerChoice.toLowerCase();
+   firstLet = playerChoiceLower.slice(0,1);
+   firstLetUp = firstLet.toUpperCase();
+   playerChoice = playerChoiceLower.replace(firstLet, firstLetUp);
+   
    //AND/OR conditions to determine winner, loser, and ties
    if (playerChoice === 'Rock' && aiChoice === 'Scissors' || playerChoice === 'Paper' && aiChoice === 'Rock' || playerChoice === 'Scissors' && aiChoice === 'Paper') {
        console.log(`You chose ${playerChoice} and your opponent chose ${aiChoice}. You win!`)
@@ -19,4 +25,3 @@ let computerPlay = (playerChoice) => {
        console.log('You must choose between Rock, Paper, or Scissors!')
    }
    }
-
