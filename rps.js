@@ -25,3 +25,5 @@ let RPS = (playerChoice) => {
        console.log('You must choose between Rock, Paper, or Scissors!')
    }
    }
+
+   console.log('Type "RPS()" with your rock, paper, or scissors choice in the paranthesis to start game!')
